@@ -6,12 +6,12 @@ Brief motivation here as well as in presentation
 
 ## Overview
 
-We are going to craft a tech-themed flitz site to send to our CS crushes. Since we want our crushes to know we're sick coders, we're going to make the site *fancy* with some crazy cool CSS. We'll add old-school glitch effects to headers, make curly brackets float across the page, show some nerdy pickup lines on animated cards, and hide a secret message that the user can scroll to reveal, all with pure CSS! Once you've completed the tutorial, you can substitute your own content and blitz the link to someone to ask for a study date.
+We are going to craft a tech-themed flitz site to send to our CS crushes. Since we want our crushes to know we're sick coders, we're going to make the site *fancy* with some crazy cool CSS. We'll add old-school glitch effects to headers, make curly brackets float across the page, show some nerdy pickup lines on animated cards, and hide a secret message that the user can drag to reveal, all with pure CSS! Once you've completed the tutorial, you can substitute your own content and blitz the link to someone to ask for a study date.
 
 ## Setup
 
-Any necessary setup steps
-
+Create a folder titled `fancy-css-workshop`, then download `starter/index.html` and `starter/style.css` and place them in this folder. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial.
+ 
 ## Step by Step
 
 #### First Page: Glitching Text and Floating Brackets
@@ -63,11 +63,41 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 6. Now use `transform: scale3d` and `transform: translate3d` to return the text to its original position, and use `clip-path` to show the whole text by giving it values for the whole rectangle view. Putting two percentages on one line holds the transformations inside the brackets for this span of the animation.
 ```css
-    10%, 50.5% {
+    10%, 77% {
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     } 
  ```
+ 
+ 7. The rest of the animation will include another glitch with a ripply side-shift effect. In the code below, the `translate3d` effect will run from 78% to 80%, so the text will slowly move from 20px to the right back to the original position. As that is happening, two more `clip-paths` display different segments of the moving text. Finally, the text holds its original position from 80% to 100%, a.k.a. the end of the animation
+ ```css
+    78% {
+        transform: translate3d(20px, 0, 0);
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    } 79% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    } 80%, 100% {
+        transform: translate3d(0, 0, 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+ ```
+ 
+ 8. Lastly, you need to apply this affect to the header text. Under the class `.glitch-text`, define this animation and play with the length of the animation to see how the effect changes. Also, set the `animation-iteration-count` to be infinite so the glitch plays on a continuous loop.
+```css
+    .glitch-text {
+        animation-name: glitch-text;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+    }
+```
+
+9. If you view your page in localhost, you should see your text glitching out! Playing with the pixel and timing values can make the effect look drastically different, just go with what you think looks good.
+
+#### Second Page: Flipping Boxes
+
+#### Third Page: Draggable Hidden Message
+
+#### Fourth Page: Parallax and Hover Effects
 
 :sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
 
