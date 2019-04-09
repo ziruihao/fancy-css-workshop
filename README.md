@@ -99,6 +99,8 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 #### Fourth Page: Parallax and Hover Effects
 
+#### Scroll Effect
+
 :sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
 
 Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
