@@ -1,0 +1,60 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.title-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glitch-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5vw;
+    color: #1ec503;
+    animation-name: glitch-text;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+/*inspo from https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css*/
+@keyframes glitch-text {
+    0% {
+        transform: translate3d(-10px, 0, 0) scale3d(-1, -1, 1);
+        clip-path: polygon(0 20%, 100% 20%, 100% 21%, 0 21%);
+    } 2% {
+        clip-path: polygon(0 33%, 100% 33%, 100% 33%, 0 33%);
+    } 4% {
+        clip-path: polygon(0 44%, 100% 44%, 100% 44%, 0 44%);
+    } 5% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    } 6% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 70%, 0 70%);
+    } 7% {
+        clip-path: polygon(0 80%, 100% 80%, 100% 80%, 0 80%);
+    }  8% {
+        clip-path: polygon(0 50%, 100% 50%, 100% 55%, 0 55%);
+    } 9% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    } 9.9% {
+        transform: translate3d(-10px, 0, 0) scale3d(-1, -1, 1);
+    } 10%, 50.5% {
+        transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    } 51%, 77% {
+        transform: translate3d(2px, 0, 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    } 78% {
+        transform: translate3d(20px, 0, 0);
+        clip-path: polygon(0 50%, 100% 50%, 100% 20%, 0 20%);
+    } 79% {
+        clip-path: polygon(0 70%, 100% 70%, 100% 80%, 0 80%);
+    } 80%, 100% {
+        transform: translate3d(0, 0, 0);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+} 
