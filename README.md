@@ -1,4 +1,4 @@
-# CS52 Workshops: Fancy CSS
+# CS52 Workshops: Fancy CSS Flitz
 
 ![](https://media.giphy.com/media/24652QfeZzNIPzoH36/giphy.gif)
 
