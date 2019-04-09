@@ -1,6 +1,6 @@
-# CS52 Workshops:  TITLE OF YOUR WORKSHOP
+# CS52 Workshops: Fancy CSS
 
-![](http://i.giphy.com/eUh8NINbZf9Ys.gif)
+![](https://media.giphy.com/media/24652QfeZzNIPzoH36/giphy.gif)
 
 Brief motivation here as well as in presentation
 
