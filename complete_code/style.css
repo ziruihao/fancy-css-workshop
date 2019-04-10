@@ -3,6 +3,9 @@ body {
     margin: 0;
 }
 
+/******************************************
+GLITCH TEXT AND FALLING CODE STYLING AND ANIMATIONS
+*******************************************/
 .title-section {
     width: 100vw;
     height: 100vh;
@@ -26,35 +29,36 @@ body {
 }
 
 .back {
-    position: fixed;
-    top: -30px;
+    position: absolute;
     width: 100vw;
     height: 100vh;
 }
 
-.scroll-text {
+#text-lines {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*https://stackoverflow.com/questions/4264527/vertical-text-direction*/
+.scroll-text-1 {
     color: white;
     font-size: 1.5vw;
     font-family: 'Press Start 2P', cursive;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    animation: fall1 9s linear infinite;
 }
 
-#fall1 {
-    transform:translateY(-110%);
-    animation: fall1 5s linear infinite;
-    position: fixed;
-}
-
-#fall2 {
-    transform:translateY(-110%);
-    animation: fall2 6s linear infinite;
-    position: fixed;
-    z-index: 4;
-}
-
-#fall3 {
-    transform:translateY(-110%);
-    animation: fall3 5s linear infinite;
-    z-index: 5;
+.scroll-text-2 {
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    animation: fall2 13s linear infinite;
 }
 
 /*inspo from https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css*/
@@ -95,31 +99,25 @@ body {
 /* inspo from https://codepen.io/anon/pen/vMgpPB */
 @keyframes fall1 {
     0% {
-        transform: translateY(0vh);
+        transform: translateY(-50vh);
     }
-    100% {
+    80%, 100% {
         transform: translateY(100vh);
     }
 }
 
 @keyframes fall2 {
-    0%, 20% {
-        transform: translateY(0vh);
+    0% {
+        transform: translateY(-100vh);
     }
     100% {
         transform: translateY(100vh);
     }
 }
 
-@keyframes fall3 {
-    0%, 30% {
-        transform: translateY(0vh);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
+/******************************************
+HEART HOVER SECTION STYLING AND ANIMATIONS
+*******************************************/
 #title {
     font-size: 2.5vw;
     font-family: 'Press Start 2P', cursive;
