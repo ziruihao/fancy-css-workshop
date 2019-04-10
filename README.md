@@ -1,6 +1,6 @@
 # CS52 Workshops: Fancy CSS Flitz
 
-![](https://media.giphy.com/media/24652QfeZzNIPzoH36/giphy.gif)
+![](https://media.giphy.com/media/ubQOPZPbPPJ7y/giphy.gif)
 
 Implementing cool effects with fancy CSS is awesome because it allows you to modernize your design using basic tools that you already know how to use. This can help you convey information more intuitively and efficiently, implement creative user interactions, and add joy to your site! Plus, CSS is faster than costly JavaScript, so animations will run smoothly and won't slow down your site. The tutorial below will lead you through just a few of the cool things you can make happen with pure CSS. 
 
