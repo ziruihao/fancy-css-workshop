@@ -97,13 +97,112 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 9. If you view your page in localhost, you should see your text glitching out! Playing with the pixel and timing values can make the effect look drastically different, just go with what you think looks good.
 
-### Second Page: Flipping Boxes
+
+
+10. Now let's work on the falling characters in the background. If you take a look at `index.html`, you'll see a `div` with id `text-lines`, which contains `<p>` tags of randomly spaced characters (`&nbsp` is a way to display spaces, since html automatically collapses all spaces). We will use CSS to style and animate these lines to make it look like characters falling in the background.
+
+
+11. First, let's work on making these characters appear _behind_ the glitch text. The glitch-text header is in the `div` class `.front`, and the characters are in the `div` class `.back`. We will use `z-index` to make it look like the characters are underneath the glitch text.
+```css
+    .front {
+      z-index: 2;
+    }
+
+    .back {
+        position: absolute;
+        width: 100vw;
+        height: 100vh;
+    }
+```
+The `z-index` property only works on elements with a set `position` property, as we see in `.back`.
+
+12. Now, don't panic because we can't see the characters yet. Let's add some styling to them.
+```css
+  .scroll-text-1 {
+      color: white;
+      font-size: 1.5vw;
+      font-family: 'Press Start 2P', cursive;
+  }
+
+  .scroll-text-2 {
+      color: white;
+      font-size: 1.5vw;
+      font-family: 'Press Start 2P', cursive;
+    }
+```
+The reason why we have two `scroll-text` classes is because later on, we want to have two slightly varied animation speeds to give a little variety to the falling effect. You should now see a bunch of randomly placed characters _behind_ the glitch-text.
+
+13. Let's add some style to the class `.text-line` so we can space the characters out a bit better.
+```css
+  #text-lines {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+```
+14. Now, you might be wondering why we chose our `flex-direction` to be `row`. This is because we are going restyle the `scroll-text` so that the characters appear in vertical "strips". Add the following propeties to `.scroll-text-1` and `.scroll-text-2`.
+```css
+  .scroll-text-1 {
+      ...
+      text-orientation: upright;
+      writing-mode: vertical-rl;
+  }
+  .scroll-text-2 {
+      ...
+      text-orientation: upright;
+      writing-mode: vertical-rl;
+  }
+```
+Great, we've just used a hacky method to make our characters look randomly spaced!
+
+15. Now it's time to add the falling animation. Let's add an `animation` property to both `scroll-text` classes.
+```css
+  .scroll-text-1 {
+      ...
+      animation: fall1 9s linear infinite;
+  }
+  .scroll-text-2 {
+      ...
+      animation: fall2 13s linear infinite;
+  }
+```
+Notice that we use the shorthand version of the `animation` property, so the first argument is `animation-name`, the second is `animation-duration`, and the third is `animation-iteration-count`. Also notice that the `animation-duration` is slightly different for `fall1` and `fall2`: this is the variation we talked about earlier. The characters should't move yet, since we haven't added the `@@keyframes`.
+
+16. So let's add the `@keyframes` that will actually make the characters move.
+```css
+  @keyframes fall1 {
+      0% {
+          transform: translateY(-50vh);
+      }
+      80%, 100% {
+          transform: translateY(100vh);
+      }
+  }
+  @keyframes fall2 {
+      0% {
+          transform: translateY(-100vh);
+      }
+      100% {
+          transform: translateY(100vh);
+      }
+  }
+```
+Let's break this down. `0%` refers to the beginning of the animation (0% of the way through the frame, if you will), and `100%` refers to the end of the animation (100% of the way through the frame). So in fall2, for example, we are saying "at the beginning of the frame, translate the text in the y-axis -100vh (so that the characters appear to be off-screen). Then, over the duration specified in the animation, translate the text in the y-axis to 100vh by the end of the frame.
+
+17. Congrats! You should now have "randomly :wink:" falling characters in the background!
+
+#### Second Page: Flipping Boxes
+
 
 ### Third Page: Draggable Hidden Message
+
 
 ### Fourth Page: Hover Effects
 1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
 ![](https://media.giphy.com/media/35KdD3pqLudXAPHzB2/giphy.gif)
+
 
 2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
 
