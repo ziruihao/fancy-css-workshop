@@ -55,13 +55,15 @@ body {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 } 
-#title{
+
+#title {
     font-size: 30px;
     text-align: center;
-    font-family: cursive;
-    color: #ec1e4b;
+    font-family: 'Press Start 2P', cursive;
+    color: #1ec503;
 }
-#parallax{
+
+#parallax {
     background-image: url("heart-wifi-animated-gif.gif");
     min-height: 600px;
     background-attachment: fixed;
@@ -69,25 +71,29 @@ body {
     background-repeat: no-repeat;
     background-size: 600,450;
 }
-#heart-container{
+
+#heart-container {
     height: 750px;
     background-color: white;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: center;
     padding-top: 300px;
 }
-#heart-container image{
+
+#heart-container image {
     width: 300px;
     height: 300px;
 }
-.heart{
+
+.heart {
     position: relative;
     width: 300px;
     height: 270px;
     float: left;
     transition: transform .8s ease-in-out;
 }
+
 .heart:before,
 .heart:after {
     position: absolute;
@@ -96,23 +102,27 @@ body {
     top: 100;
     width: 150px;
     height: 240px;
-    background: #ec1e4b;
+    background: #1ec503;
     border-radius: 150px 150px 0 0;
-  transform: rotate(-45deg);
-  transform-origin: 0 100%;
+    transform: rotate(-45deg);
+    transform-origin: 0 100%;
 }
+
 .heart:after {
     left: 0;
     transform: rotate(45deg);
     transform-origin :100% 100%;
   }
+
   #h3:hover{
       transform: rotate(180deg);
   }
+
   #h2:hover{
     animation: shake 0.5s;
     animation-iteration-count: infinite;
   }
+
   @keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
@@ -126,14 +136,17 @@ body {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
   #h1:hover{
-      animation: grow 1s ease infinite;
+      animation: grow .5s ease infinite;
   }
+
   @keyframes grow{
       0%{transform: scale(1);}
-      50%{transform: scale(1.5);}
+      50%{transform: scale(1.2);}
       100%{transform: scale(1);}
   }
+
   #h1 span, #h2 span, #h3 span{
       z-index: 10;
       color: white;
@@ -141,6 +154,7 @@ body {
       top: 80px;
       right: -129px;
   }
-  #h1,#h2,#h3{
+
+  #h1, #h2, #h3{
       top: 220px;
   }
