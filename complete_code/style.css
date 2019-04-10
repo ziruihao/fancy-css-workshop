@@ -194,3 +194,50 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
 }
+
+
+/* the following css is inspired from: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
+.slider {
+    width: 500px;
+    text-align: center;
+    overflow: hidden;
+    align-self: center;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    
+    border-radius: 5px;
+    
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
+  }
+
+  .slides > div {
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    background: pink;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+  }
+
+div.hidden-message-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+}
