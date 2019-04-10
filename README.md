@@ -100,6 +100,7 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 
 10. Now let's work on the falling characters in the background. If you take a look at `index.html`, you'll see a `div` with id `text-lines`, which contains `<p>` tags of randomly spaced characters (`&nbsp` is a way to display spaces, since html automatically collapses all spaces). We will use CSS to style and animate these lines to make it look like characters falling in the background.
+
 ![](https://media.giphy.com/media/gh0vdFfLwOq8uCHZV7/giphy.gif)
 
 11. First, let's work on making these characters appear _behind_ the glitch text. The glitch-text header is in the `div` class `.front`, and the characters are in the `div` class `.back`. We will use `z-index` to make it look like the characters are underneath the glitch text.
@@ -196,7 +197,7 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 ### Second Page: Flipping Boxes
 1. For this part, you should be on the second page with a card in the middle. Our goal is to make it so when you hover over the card, it will transform/flip to the other side revealing a message!
 
-2. The part we are editing in index.html is 
+2. The part we are editing in index.html is
 ```html
       <div class="pun-flip-section">
         <h2>Be my date?</h2>
@@ -267,7 +268,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 
 ### Fourth Page: Hover Effects
 1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
- 
+
 
 2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
 
