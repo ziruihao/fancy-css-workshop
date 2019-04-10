@@ -15,7 +15,8 @@ Create a folder titled `fancy-css-workshop`, then download `starter/index.html` 
 ## Step by Step
 
 ### First Page: Glitching Text and Floating Brackets
-1. Currently, your first page should just display a plain grey background with a green pixel-text message. We'll start by using keyframes to create a glitch animation to apply to this header text.
+1. Currently, your first page should just display a plain grey background with a green pixel-text message. We'll start by using keyframes to create a glitch animation to apply to this header text. **Keyframes** lets you **define an animation by gradually changing between different sets of styles.** The order is set through percentages, where `0%` is the start of the animation and `100%` is the end. This lets you run the same animation at diffferent time scales without having to define a whole new keyframe!
+
 ![](https://media.giphy.com/media/pOwfCO6JBMUdvvrbcb/giphy.gif)
 
 2. In your `style.css`, define a new keyframes animation called `glitch-text`.
