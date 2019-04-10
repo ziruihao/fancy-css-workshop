@@ -100,7 +100,7 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 
 10. Now let's work on the falling characters in the background. If you take a look at `index.html`, you'll see a `div` with id `text-lines`, which contains `<p>` tags of randomly spaced characters (`&nbsp` is a way to display spaces, since html automatically collapses all spaces). We will use CSS to style and animate these lines to make it look like characters falling in the background.
-
+![](https://media.giphy.com/media/gh0vdFfLwOq8uCHZV7/giphy.gif)
 
 11. First, let's work on making these characters appear _behind_ the glitch text. The glitch-text header is in the `div` class `.front`, and the characters are in the `div` class `.back`. We will use `z-index` to make it look like the characters are underneath the glitch text.
 ```css
