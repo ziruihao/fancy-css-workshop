@@ -87,7 +87,7 @@ FALLING CODE STYLING AND ANIMATIONS
     font-family: 'Press Start 2P', cursive;
     text-orientation: upright;
     writing-mode: vertical-rl;
-    animation: fall1 9s linear infinite;
+    animation: fall1 8s linear infinite;
 }
 
 .scroll-text-2 {
@@ -144,8 +144,8 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
 }
 
 .heart {
-    transition: transform .8s ease-in-out;
     position: relative;
+    transition: all .8s ease-in-out;
 }
 
 .heart img {
@@ -163,7 +163,7 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
 }
 
 #h1:hover {
-    animation: grow .5s ease infinite;
+    animation: beat .5s ease infinite;
 }
 
 #h2:hover {
@@ -189,7 +189,7 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-@keyframes grow{
+@keyframes beat {
     0%{transform: scale(1);}
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
