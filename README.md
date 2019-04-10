@@ -194,6 +194,72 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 17. Congrats! You should now have "randomly :wink:" falling characters in the background!
 
 ### Second Page: Flipping Boxes
+1. For this part, you should be on the second page with a card in the middle. Our goal is to make it so when you hover over the card, it will transform/flip to the other side revealing a message!
+
+2. The part we are editing in index.html is 
+```html
+      <div class="pun-flip-section">
+        <h2>Be my date?</h2>
+        <div class="card-flip">
+          <div class="card-front">
+            <h2>Heyy, if they made you in C</h2>
+          </div>
+          <div class="card-back">
+            <h2>You would have a pointer to my heart ;)</h2>
+          </div>
+        </div>
+      </div>
+```
+Keep this in mind as we start editing the css to add some fancy styles.
+
+3. The fist thing we would want to add is to make the card and set some transform properties using perspective, transition, and transform-style. Append the following code to the end of your css file.
+```css
+  .card-flip {
+      background-color: lightpink;
+      width: 800px;
+      height: 300px;
+      border: 1px solid;
+      perspective: 1000px;
+      transition: transform 1.5s;
+      transform-style: preserve-3d;
+  }
+```
+You can toy around with these last properties such as making the flipping animation longer and such.
+
+4. Now let's make it so the card would respond when we hover over it. Append the following to css file again.
+```css
+ .card-flip:hover {
+      transform: rotateY(180deg);
+      background: transparent;
+  }
+```
+This will make it so when you hover over it, it would flip along its vertical axis 180 degrees. Try out rotateX or rotateZ for some other ways to do it!
+
+5. Now, let's position the the text we want correctly and have it so when they rotate over they would be hidden using backface-visibility. Append the following to CSS.
+
+```css
+  .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: lightpink;
+  }
+```
+Now the text should make more sense when viewing it.
+
+6. Finally, we will add another transform just to the backside of the card so it would do the animation. Append the following to CSS.
+```css
+  .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: lightpink;
+  }
+```
+
+With that, this should work well! Hover over it to see the effects. Also feel free to put in your own custom messages and images on the card faces. Have fun!
 
 
 ### Third Page: Scrollable Hidden Message
@@ -201,8 +267,7 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 
 ### Fourth Page: Hover Effects
 1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
-![](https://media.giphy.com/media/35KdD3pqLudXAPHzB2/giphy.gif)
-
+ 
 
 2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
 
