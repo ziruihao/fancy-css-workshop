@@ -2,7 +2,7 @@
 
 ![](https://media.giphy.com/media/24652QfeZzNIPzoH36/giphy.gif)
 
-Implementing cool effects with fancy CSS is awesome because it allows you to modernize your design using basic tools that you already know how to use. This can help you convey information more intuitively and efficiently, implement creative user interactions, and add joy to your site! Plus, CSS is faster than costly JavaScript, so animations will run smoothly and won't slow down your site. The tutorial below will lead you through just a few of the cool things you can make happen with pure CSS. 
+Implementing cool effects with fancy CSS is awesome because it allows you to modernize your design using basic tools that you already know how to use. This can help you convey information more intuitively and efficiently, implement creative user interactions, and add joy to your site! Plus, CSS is faster than costly JavaScript, so animations will run smoothly and won't slow down your site. The tutorial below will lead you through just a few of the cool things you can make happen with pure CSS.
 
 ## Overview
 
@@ -11,10 +11,10 @@ We are going to craft a tech-themed flitz site to send to our CS crushes. Since 
 ## Setup
 
 Create a folder titled `fancy-css-workshop`, then download `starter/index.html` and `starter/style.css` and place them in this folder. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial.
- 
+
 ## Step by Step
 
-#### First Page: Glitching Text and Floating Brackets
+#### First Page: Glitching Text and Falling Characters
 1. Currently, your first page should just display a plain grey background with a green pixel-text message. We'll start by using keyframes to create a glitch animation to apply to this header text.
 ![](https://media.giphy.com/media/pOwfCO6JBMUdvvrbcb/giphy.gif)
 
@@ -25,11 +25,11 @@ Create a folder titled `fancy-css-workshop`, then download `starter/index.html` 
 }
 ```
 
-3. Within this animation, we will use `transform: scale3d`, `transform: translate3d`, and `clip-path` to make the text appear to "glitch," or briefly display in random, jumping segments. 
+3. Within this animation, we will use `transform: scale3d`, `transform: translate3d`, and `clip-path` to make the text appear to "glitch," or briefly display in random, jumping segments.
  * `scale3d(x, y, z)` changes the size of the item on a 3D scale. We'll use this to flip the text.
  * `translate3d(x, y, z)` moves the item on each argument's axis. We'll use this to shift the text.
  * `clip-path: shape(args...)` shows only the portion of the item defined by the shape after the colon.
-We'll start with the first set of segments that take up 0% to 10% of the animation. 
+We'll start with the first set of segments that take up 0% to 10% of the animation.
 
 4. Start by using `transform: scale3d` and `transform: translate3d` to flip the text and move it to the left a bit, then we'll add the first `clip-path` to show only a small rectangular portion of the full text.
 ```css
@@ -66,9 +66,9 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
     10%, 77% {
         transform: translate3d(0, 0, 0) scale3d(1, 1, 1);
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    } 
+    }
  ```
- 
+
  7. The rest of the animation will include another glitch with a ripply side-shift effect. In the code below, the `translate3d` effect will run from 78% to 80%, so the text will slowly move from 20px to the right back to the original position. As that is happening, two more `clip-paths` display different segments of the moving text. Finally, the text holds its original position from 80% to 100%, a.k.a. the end of the animation
  ```css
     78% {
@@ -81,7 +81,7 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
  ```
- 
+
  8. Lastly, you need to apply this affect to the header text. Under the class `.glitch-text`, define this animation and play with the length of the animation to see how the effect changes. Also, set the `animation-iteration-count` to be infinite so the glitch plays on a continuous loop.
 ```css
     .glitch-text {
