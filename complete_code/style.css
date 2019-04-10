@@ -1,8 +1,12 @@
 body {
     padding: 0;
     margin: 0;
+    
 }
 
+/******************************************
+GLITCH TEXT STYLING AND ANIMATIONS
+*******************************************/
 .title-section {
     width: 100vw;
     height: 100vh;
@@ -23,38 +27,6 @@ body {
 
 .front {
     z-index: 2;
-}
-
-.back {
-    position: fixed;
-    top: -30px;
-    width: 100vw;
-    height: 100vh;
-}
-
-.scroll-text {
-    color: white;
-    font-size: 1.5vw;
-    font-family: 'Press Start 2P', cursive;
-}
-
-#fall1 {
-    transform:translateY(-110%);
-    animation: fall1 5s linear infinite;
-    position: fixed;
-}
-
-#fall2 {
-    transform:translateY(-110%);
-    animation: fall2 6s linear infinite;
-    position: fixed;
-    z-index: 4;
-}
-
-#fall3 {
-    transform:translateY(-110%);
-    animation: fall3 5s linear infinite;
-    z-index: 5;
 }
 
 /*inspo from https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css*/
@@ -92,102 +64,119 @@ body {
     }
 }
 
+/******************************************
+FALLING CODE STYLING AND ANIMATIONS
+*******************************************/
+.back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+#text-lines {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*https://stackoverflow.com/questions/4264527/vertical-text-direction*/
+.scroll-text-1 {
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    animation: fall1 8s linear infinite;
+}
+
+.scroll-text-2 {
+    color: white;
+    font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+    text-orientation: upright;
+    writing-mode: vertical-rl;
+    animation: fall2 13s linear infinite;
+}
+
 /* inspo from https://codepen.io/anon/pen/vMgpPB */
 @keyframes fall1 {
     0% {
-        transform: translateY(0vh);
+        transform: translateY(-50vh);
     }
-    100% {
+    80%, 100% {
         transform: translateY(100vh);
     }
 }
 
 @keyframes fall2 {
-    0%, 20% {
-        transform: translateY(0vh);
+    0% {
+        transform: translateY(-100vh);
     }
     100% {
         transform: translateY(100vh);
     }
 }
 
-@keyframes fall3 {
-    0%, 30% {
-        transform: translateY(0vh);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
+/******************************************
+HEART HOVER SECTION STYLING AND ANIMATIONS
+*******************************************/
 #title {
-    font-size: 30px;
-    text-align: center;
+    font-size: 2.5vw;
     font-family: 'Press Start 2P', cursive;
     color: #1ec503;
 }
 
-#parallax {
-    background-image: url("heart-wifi-animated-gif.gif");
-    min-height: 600px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 600,450;
+.heart-hover-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #heart-container {
-    height: 750px;
     background-color: white;
     display: flex;
     justify-content: space-around;
-    align-content: center;
-    padding-top: 300px;
-}
-
-#heart-container image {
-    width: 300px;
-    height: 300px;
+    align-items: center;
 }
 
 .heart {
     position: relative;
-    width: 300px;
-    height: 270px;
-    float: left;
-    transition: transform .8s ease-in-out;
+    transition: all .8s ease-in-out;
 }
 
-.heart:before,
-.heart:after {
+.heart img {
+   height: 30vw;
+}
+
+.heart p {
+    font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+    color: #1ec503;
     position: absolute;
-    content: "";
-    left: 150px;
-    top: 100;
-    width: 150px;
-    height: 240px;
-    background: #1ec503;
-    border-radius: 150px 150px 0 0;
-    transform: rotate(-45deg);
-    transform-origin: 0 100%;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.heart:after {
-    left: 0;
-    transform: rotate(45deg);
-    transform-origin :100% 100%;
-  }
+#h1:hover {
+    animation: beat .5s ease infinite;
+}
 
-  #h3:hover{
-      transform: rotate(180deg);
-  }
-
-  #h2:hover{
+#h2:hover {
     animation: shake 0.5s;
     animation-iteration-count: infinite;
-  }
+}
 
-  @keyframes shake {
+#h3:hover {
+    transform: rotate(180deg);
+}
+
+@keyframes shake {
     0% { transform: translate(1px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-1deg); }
     20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -199,31 +188,62 @@ body {
     80% { transform: translate(-1px, -1px) rotate(1deg); }
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+
+/* the following css is inspired from: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
+.slider {
+    width: 500px;
+    text-align: center;
+    overflow: hidden;
+    align-self: center;
+  }
+  
+  .slides {
+    display: flex;
+    overflow-x: auto;
+    
+    scroll-behavior: smooth;
+    
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-points-x: repeat(300px);
+    scroll-snap-type: mandatory;
   }
 
-  #h1:hover{
-      animation: grow .5s ease infinite;
+  .slides > div {
+    font-family: 'Press Start 2P', cursive;
+    flex-shrink: 0;
+    width: 500px;
+    height: 500px;
+    
+    background: black;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    color: #1ec503;
   }
 
-  @keyframes grow{
-      0%{transform: scale(1);}
-      50%{transform: scale(1.2);}
-      100%{transform: scale(1);}
-  }
+div.hidden-message-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    width: 100%;
+}
 
-  #h1 span, #h2 span, #h3 span{
-      z-index: 10;
-      color: white;
-      position: relative;
-      top: 80px;
-      right: -129px;
-  }
-
-  #h1, #h2, #h3{
-      top: 220px;
-  }
-
-  .pun-flip-section {
+.pun-flip-section {
     width: 100vw;
     height: 100vh;
     background-color: lightblue;

@@ -1,58 +1,75 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <title>this is a flitz ;)</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
-</head>
-
-<body>
-  <div class="main-container">
-    <!--https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css-->
-    <div class="title-section">
-      <div class="front">
-        <h1 class="glitch-text">This is a flitz.</h1>
-      </div>
-      <div class="back">
-        <p class="scroll-text" id="fall1">c &nbsp &nbsp &nbsp &nbsp && &nbsp &nbsp sudo &nbsp &nbsp % &nbsp &nbsp #
-          &nbsp &nbsp ; @ &nbsp &nbsp <> &nbsp "hello world!"</p>
-
-        <p class="scroll-text" id="fall2">&nbsp&nbsp &nbsp'' &nbsp &nbsp &nbsp * &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp #
-          &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp $ &nbsp</p>
-
-        <p class="scroll-text" id="fall3"> : &nbsp $ &nbsp &nbsp sudo &nbsp &nbsp % &nbsp &nbsp &nbsp &nbsp # &nbsp c
-          &nbsp &nbsp &nbsp ; &nbsp &nbsp &nbsp &nbsp@ &nbsp &nbsp &nbsp <>
-        </p>
-      </div>
-    </div>
-
-    <div class="pun-flip-section">
-      <h2>Be my date?</h2>
-      <div class="card-flip">
-        <div class="card-front">
-          <h2>Heyy, if they made you in C</h2>
+  <head>
+    <title>this is a flitz ;)</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  </head>
+  <body>
+    <div class="main-container">
+      <!--https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css-->
+      <div class="title-section">
+        <div class="front">
+          <h1 class="glitch-text">This is a flitz.</h1>
         </div>
-        <div class="card-back">
-          <h2>You would have a pointer to my heart ;)</h2>
+        <div class="back">
+          <div id="text-lines">
+              <p class="scroll-text-1">* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *</p>
+              <p class="scroll-text-2">* &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp *</p>
+              <p class="scroll-text-1">&nbsp &nbsp &nbsp { &nbsp &nbsp &nbsp &nbsp &nbsp } &nbsp &nbsp</p>
+              <p class="scroll-text-2">&nbsp &nbsp &nbsp { &nbsp &nbsp &nbsp &nbsp &nbsp } &nbsp &nbsp</p>
+              <p class="scroll-text-2">&nbsp &nbsp * &nbsp &nbsp &nbsp &nbsp &nbsp * &nbsp &nbsp &nbsp</p>
+              <p class="scroll-text-1">&nbsp &nbsp &nbsp &nbsp &nbsp # &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+              <p class="scroll-text-2">&nbsp &nbsp &nbsp &nbsp &nbsp # &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</p>
+              <p class="scroll-text-1">&nbsp &nbsp < &nbsp &nbsp &nbsp &nbsp > &nbsp &nbsp &nbsp &nbsp</p>
+              <p class="scroll-text-2">&nbsp &nbsp < &nbsp &nbsp &nbsp &nbsp > &nbsp &nbsp &nbsp &nbsp</p>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="hidden-message-section">
-      <!-- yes maybe no -->
-    </div>
+      <div class="pun-flip-section">
+        <h2>Be my date?</h2>
+        <div class="card-flip">
+          <div class="card-front">
+            <h2>Heyy, if they made you in C</h2>
+          </div>
+          <div class="card-back">
+            <h2>You would have a pointer to my heart ;)</h2>
+          </div>
+        </div>
+      </div>
 
-    <div class="parallax-hover-section">
-      <p id="title">What will your answer be?</p>
-      <div id="parallax"></div>
-      <div id="heart-container">
-        <div id="h1" class="heart"><span>Yes!</span></div>
-        <div id="h2" class="heart"><span>Maybe...</span></div>
-        <div id="h3" class="heart"><span>No :(</span></div>
+      <div class="hidden-message-section">
+        <div class="slider">
+          <div class="slides">
+            <div id="slide-1">
+              <p>Scroll Left</p>
+            </div>
+            <div id="slide-2">
+              Hi X
+            </div>
+            <div id="slide-3">
+              I was wondering...
+            </div>
+            <div id="slide-4">
+              you and me
+            </div>
+            <div id="slide-5">
+              Molly's @5 tomo night?
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="heart-hover-section">
+          <p id="title">Will you be my study date?</p>
+          <div id="heart-container">
+              <div id="h1" class="heart"><img src="pixel-heart.png"><p>yes!</p></div>
+              <div id="h2" class="heart"><img src="pixel-heart.png"><p>maybe...</p></div>
+              <div id="h3" class="heart"><img src="pixel-heart.png"><p>no :(</p></div>
+          </div>
       </div>
     </div>
-  </div>
-</body>
-
+  </body>
 </html>
