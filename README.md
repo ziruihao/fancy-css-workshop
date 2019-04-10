@@ -193,10 +193,10 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 
 17. Congrats! You should now have "randomly :wink:" falling characters in the background!
 
-#### Second Page: Flipping Boxes
+### Second Page: Flipping Boxes
 
 
-### Third Page: Draggable Hidden Message
+### Third Page: Scrollable Hidden Message
 
 
 ### Fourth Page: Hover Effects
