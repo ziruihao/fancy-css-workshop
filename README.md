@@ -169,7 +169,7 @@ and the beating animation will use the scale transformation to pulse the heart.
 * [ ] Why fancy CSS is useful
 * [ ] When fancy CSS is advantageous to use
 
-## Reflection
+## Reflection Questions
 Don't forget to submit these on Canvas!
 
 * [ ] Why use CSS to add effects to your site instead of JavaScript? When might it be better to use JavaScript?
