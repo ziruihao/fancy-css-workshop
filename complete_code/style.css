@@ -221,11 +221,13 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
     flex-shrink: 0;
     width: 500px;
     height: 500px;
+    
     background: black;
     transform-origin: center center;
     transform: scale(1);
     transition: transform 0.5s;
     position: relative;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -240,3 +242,44 @@ div.hidden-message-section {
     height: 90vh;
     width: 100%;
 }
+
+.pun-flip-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P";
+    text-align: center;
+    font-size: 2em;
+    flex-direction: column;
+  }
+
+  .card-flip {
+      background-color: lightpink;
+      width: 800px;
+      height: 300px;
+      border: 1px solid;
+      perspective: 1000px;
+      transition: transform 1.5s;
+      transform-style: preserve-3d;
+  }
+
+  .card-flip:hover {
+      transform: rotateY(180deg);
+      background: transparent;
+  }
+
+  .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: lightpink;
+  }
+
+  .card-back {
+      transform: rotateY(180deg);
+  }
+>>>>>>> c8cdffcb538aabf07d22f4869f9288e5156fa2ae
