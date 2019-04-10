@@ -1,6 +1,6 @@
 # CS52 Workshops: Fancy CSS Flitz
 
-![](https://media.giphy.com/media/24652QfeZzNIPzoH36/giphy.gif)
+![](https://media.giphy.com/media/ubQOPZPbPPJ7y/giphy.gif)
 
 Implementing cool effects with fancy CSS is awesome because it allows you to modernize your design using basic tools that you already know how to use. This can help you convey information more intuitively and efficiently, implement creative user interactions, and add joy to your site! Plus, CSS is faster than costly JavaScript, so animations will run smoothly and won't slow down your site. The tutorial below will lead you through just a few of the cool things you can make happen with pure CSS. 
 
@@ -14,8 +14,9 @@ Create a folder titled `fancy-css-workshop`, then download `starter/index.html` 
  
 ## Step by Step
 
-#### First Page: Glitching Text and Floating Brackets
-1. Currently, your first page should just display a plain grey background with a green pixel-text message. We'll start by using keyframes to create a glitch animation to apply to this header text.
+### First Page: Glitching Text and Floating Brackets
+1. Currently, your first page should just display a plain grey background with a green pixel-text message. We'll start by using keyframes to create a glitch animation to apply to this header text. **Keyframes** lets you **define an animation by gradually changing between different sets of styles.** The order is set through percentages, where `0%` is the start of the animation and `100%` is the end. This lets you run the same animation at diffferent time scales without having to define a whole new keyframe!
+
 ![](https://media.giphy.com/media/pOwfCO6JBMUdvvrbcb/giphy.gif)
 
 2. In your `style.css`, define a new keyframes animation called `glitch-text`.
@@ -93,31 +94,90 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 9. If you view your page in localhost, you should see your text glitching out! Playing with the pixel and timing values can make the effect look drastically different, just go with what you think looks good.
 
-#### Second Page: Flipping Boxes
+### Second Page: Flipping Boxes
 
-#### Third Page: Draggable Hidden Message
+### Third Page: Draggable Hidden Message
 
-#### Fourth Page: Hover Effects
+### Fourth Page: Hover Effects
+1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
+![](https://media.giphy.com/media/35KdD3pqLudXAPHzB2/giphy.gif)
 
-#### Scroll Effect
+2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
 
-:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
+```css
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+```
+and the beating animation will use the scale transformation to pulse the heart.
+```css
+@keyframes beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+```
 
-Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
+3. We can now apply these effects to the first and second hearts.
+```css
+#h1:hover {
+    animation: beat .5s ease infinite;
+}
+
+#h2:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+```
+
+4. Lastly, we want the third heart to flip upside down on hover. We don't need to define an animation for this effect, we can just add in a rotating transformation as a hover effect like this:
+```css
+#h3:hover {
+    transform: rotate(180deg);
+}
+```
+
+5. Now all your hearts should animate on hover!
 
 
-## Summary / What you Learned
+### Scroll Effect
 
-* [ ] can be checkboxes
 
-## Reflection
+## Summary
+**What your site has:**
+* [ ] A glitchy text effect by hiding/showing different parts of a header
+* [ ] Scrolling code in the background of a screen
+* [ ] Cards that flip on hover
+* [ ] A hidden message that the user can drag to reveal
+* [ ] Different, fun hover effects for images
+* [ ] Fading scroll between different divs
 
-*2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
+**What you learned:**
+* [ ] How to define your own keyframes animations
+* [ ] How to add fun hover effects to convey information
+* [ ] How to implement fun user interactions
+* [ ] Why fancy CSS is useful
+* [ ] When fancy CSS is advantageous to use
 
-* [ ] 2 reflection questions
-* [ ] 2 reflection questions
+## Reflection Questions
+Don't forget to submit these on Canvas!
+
+* [ ] Why use CSS to add effects to your site instead of JavaScript? When might it be better to use JavaScript?
+* [ ] Why add fancy styling to your site at all? When could fancy effects be useful?
 
 
 ## Resources
 
-* cite any resources
+:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
+
+Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
