@@ -97,7 +97,7 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 #### Third Page: Draggable Hidden Message
 
-#### Fourth Page: Parallax and Hover Effects
+#### Fourth Page: Hover Effects
 
 #### Scroll Effect
 

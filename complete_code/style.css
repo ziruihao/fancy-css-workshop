@@ -188,14 +188,8 @@ body {
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 
-<<<<<<< HEAD
-  #h1, #h2, #h3{
-      top: 220px;
-  }
-=======
 @keyframes grow{
     0%{transform: scale(1);}
     50%{transform: scale(1.1);}
     100%{transform: scale(1);}
 }
->>>>>>> glitch-heart
