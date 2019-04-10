@@ -152,23 +152,32 @@ and the beating animation will use the scale transformation to pulse the heart.
 
 ### Scroll Effect
 
-:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
 
-Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
+## Summary
+**What your site has:**
+* [ ] A glitchy text effect by hiding/showing different parts of a header
+* [ ] Scrolling code in the background of a screen
+* [ ] Cards that flip on hover
+* [ ] A hidden message that the user can drag to reveal
+* [ ] Different, fun hover effects for images
+* [ ] Fading scroll between different divs
 
-
-## Summary / What you Learned
-
-* [ ] can be checkboxes
+**What you learned:**
+* [ ] How to define your own keyframes animations
+* [ ] How to add fun hover effects to convey information
+* [ ] How to implement fun user interactions
+* [ ] Why fancy CSS is useful
+* [ ] When fancy CSS is advantageous to use
 
 ## Reflection
+Don't forget to submit these on Canvas!
 
-*2 questions for the workshop participants to answer (very short answer) when they submit the workshop. These should try to get at something core to the workshop, the what and the why.*
-
-* [ ] 2 reflection questions
-* [ ] 2 reflection questions
+* [ ] Why use CSS to add effects to your site instead of JavaScript? When might it be better to use JavaScript?
+* [ ] Why add fancy styling to your site at all? When could fancy effects be useful?
 
 
 ## Resources
 
-* cite any resources
+:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
+
+Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
