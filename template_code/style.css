@@ -76,39 +76,29 @@ FLIPPING PUN STYLING AND ANIMATIONS
     color: #1ec503;
 }
 
+.card-front h2, .card-back h2 {
+    padding: 1vw;
+}
+
 /* inspo from https://codepen.io/edeesims/pen/iGDzk */
 .card-flip {
-    width: 24vw;
-    height: 24vw;
-    perspective: 1000px;
+
 }
 
 .card-flip-inner {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    transition: transform 1.5s;
-    transform-style: preserve-3d;
+
 }
 
 .card-flip:hover .card-flip-inner {
-    transform: rotateY(180deg);
+
 }
 
 .card-front, .card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    background-color: #000000;
+
 }
 
 .card-back {
-    transform: rotateY( 180deg );
-}
 
-.card-front h2, .card-back h2 {
-    padding: 1vw;
 }
 
 /******************************************
