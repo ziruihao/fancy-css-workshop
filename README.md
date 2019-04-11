@@ -265,62 +265,67 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 
 ### Third Page: Scrollable Hidden Message
 
-1. Here we'll be working in `<div class="hidden-message-section">` where you'll be adding your special flitz message ;)
-		  1. This page contains two other `<div>` containers: slider and slides that take care of the hidden message
+1. Here we'll be working in `<div class="hidden-message-section">` where you'll be adding your special flitz message! This page contains two other `<div>` containers: slider and slides that take care of the hidden message
+
 2. Add in your text for the hidden message where it says "Add Text Here", and then paste this piece of code inside `<div  class="slides">`.
-	1. ```html
-		<div  id="slide-1"> 
-		<p>Scroll Left</p>
-		</div>
-		<div  id="slide-2">
-			Add Text Here
-		</div>
-		<div  id="slide-3">
-			Add Text Here
-		</div>
-		<div  id="slide-4">
-			Add Text Here
-		</div>
-		<div  id="slide-5">
-			Add Text Here
-		</div>
+```html
+	<div  id="slide-1"> 
+	<p>Scroll Left</p>
+	</div>
+	<div  id="slide-2">
+		Add Text Here
+	</div>
+	<div  id="slide-3">
+		Add Text Here
+	</div>
+	<div  id="slide-4">
+		Add Text Here
+	</div>
+	<div  id="slide-5">
+		Add Text Here
+	</div>
+```
 3. Now we move onto `<div class="hidden-message-section>`, paste the below code in the css section under `div.hidden-message-section`, this aligns the hidden message box in the center of `<div>` container.
-	1. ```css
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		height: 90vh;
-		width: 100%; 
+```css
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90vh;
+	width: 100%; 
+```
 4. Then, we move onto the `.slider` class, which takes care of styling the box for the hidden message:
-	1. ```css
-		width: 500px;
-		text-align: center;
-		overflow: hidden;
-		align-self: center;
+```css
+	width: 500px;
+	text-align: center;
+	overflow: hidden;
+	align-self: center;
+```
 5. Next, we have to style the content inside the hidden message box:
-	1. ```css
-		display: flex;
-		overflow-x: auto;
-		scroll-behavior: smooth;
-		-webkit-overflow-scrolling: touch;
-		scroll-snap-points-x: repeat(300px);
-		scroll-snap-type: mandatory;
+```css
+	display: flex;
+	overflow-x: auto;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	scroll-snap-points-x: repeat(300px);
+	scroll-snap-type: mandatory;
+```
 6. Then finally, under `.slides  >  div`, we take care of styling the font and how the different pages inside the hidden message box scroll and show the message, so paste:
-	1. ```css
-		font-family: 'Press Start 2P', cursive;
-		flex-shrink: 0;
-		width: 500px;
-		height: 500px;
-		background: black;
-		transform-origin: center  center;
-		transform: scale(1);
-		transition: transform 0.5s;
-		position: relative;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: 20px;
-		color: #1ec503;
+```css
+	font-family: 'Press Start 2P', cursive;
+	flex-shrink: 0;
+	width: 500px;
+	height: 500px;
+	background: black;
+	transform-origin: center  center;
+	transform: scale(1);
+	transition: transform 0.5s;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 20px;
+	color: #1ec503;
+```
 
 ### Fourth Page: Hover Effects
 1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
@@ -374,7 +379,8 @@ and the beating animation will use the scale transformation to pulse the heart.
 5. Now all your hearts should animate on hover!
 
 
-### Scroll Effect
+### Bonus!
+Use radio buttons to add a click effect when one of the heart answers is selected! That way your crush can see whcih reply they are selecting. This would be a lot like the radio button menu hack from lab two. Suggestion: change the color of the text or the scale of the image when the heart is clicked.
 
 
 ## Summary
@@ -402,6 +408,10 @@ Don't forget to submit these on Canvas!
 
 ## Resources
 
-:sunglasses: GitHub markdown files [support emoji notation](http://www.emoji-cheat-sheet.com/)
+Tutorials Used:
+* https://www.creativebloq.com/how-to/how-to-create-glitch-text-and-image-effects-in-css
+* https://stackoverflow.com/questions/4264527/vertical-text-direction
+* https://codepen.io/anon/pen/vMgpPB
+* https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
+* https://codepen.io/edeesims/pen/iGDzk
 
-Here's a resource for [github markdown](https://guides.github.com/features/mastering-markdown/).
