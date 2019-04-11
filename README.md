@@ -370,7 +370,7 @@ Use radio buttons to add a click effect when one of the heart answers is selecte
 
 
 ## Reflection Questions
-Don't forget to submit these on Canvas!
+:bulb: *Don't forget to submit these on Canvas!*
 
 * [ ] Why use CSS to add effects to your site instead of JavaScript? When might it be better to use JavaScript?
 * [ ] Why add fancy styling to your site at all? When could fancy effects be useful?
