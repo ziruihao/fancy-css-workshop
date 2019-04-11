@@ -10,7 +10,7 @@ We are going to craft a tech-themed flitz site to send to our CS crushes. Since 
 
 ## Setup
 
-Download your own copy of this repo and `cd` into the `template_code` folder. It should contain `index.html`, `style.css`, and a `pixel-heart.png`. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial. You can run `python -m SimpleHTTPServer 9000` to view the non-fancy site on your localhost. 
+Download your own copy of this repo and `cd` into the `template_code` folder. It should contain `index.html`, `style.css`, and a `pixel-heart.png`. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial. You can run :computer:`python -m SimpleHTTPServer 9000` to view the non-fancy site on your localhost and to see your progress as you move through the tutorial!
 
 The `complete_code` directory has all the code for the working flitz, so you can reference it if you get stuck or just want to see what the complete site should look like. The completed tutorial is also hosted [here](http://flitz_test_2.surge.sh).
 
