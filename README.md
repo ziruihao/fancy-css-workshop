@@ -351,7 +351,7 @@ and the beating animation will use the scale transformation to pulse the heart. 
 }
 ```
 
-5. Now all your hearts should animate on hover!
+5. Now all your hearts should animate on hover! To customize your page so that everyone on campus isn't getting the exact same flitz, try some of the different transformations found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) with more documentation [here](https://www.w3schools.com/cssref/css3_pr_transform.asp)!
 
 
 ### Bonus!
