@@ -12,6 +12,8 @@ We are going to craft a tech-themed flitz site to send to our CS crushes. Since 
 
 Create a folder titled `fancy-css-workshop`, then download `starter/index.html` and `starter/style.css` and place them in this folder. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial.
 
+:rocket:Make sure to use Chrome for this tutorial! Due to compatibility, you may not get the same effects if you use a different browser.
+
 ## Step by Step
 
 ### First Page: Glitching Text and Floating Brackets
