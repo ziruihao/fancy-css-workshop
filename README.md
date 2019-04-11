@@ -357,7 +357,7 @@ and the beating animation will use the scale transformation to pulse the heart. 
 ### Bonus!
 Use radio buttons to add a click effect when one of the heart answers is selected! That way your crush can see whcih reply they are selecting. This would be a lot like the radio button menu hack from lab two. Suggestion: change the color of the text or the scale of the image when the heart is clicked.
 
-Also feel free to change the colors, fonts, and layout to make it your own! Your end result can look completely different from ours.
+Also feel free to change the colors, fonts, and layout to make it your own! Or try applying animations to different elements, like headers or text boxes. Your end result can look completely different from ours, just have fun with it.
 
 *Alternative Bonus:* Use Surge to host your site and flitz it to a friend. :wink:
 
