@@ -100,6 +100,7 @@ We'll start with the first set of segments that take up 0% to 10% of the animati
 
 
 10. Now let's work on the falling characters in the background. If you take a look at `index.html`, you'll see a `div` with id `text-lines`, which contains `<p>` tags of randomly spaced characters (`&nbsp` is a way to display spaces, since html automatically collapses all spaces). We will use CSS to style and animate these lines to make it look like characters falling in the background.
+
 ![](https://media.giphy.com/media/gh0vdFfLwOq8uCHZV7/giphy.gif)
 
 11. First, let's work on making these characters appear _behind_ the glitch text. The glitch-text header is in the `div` class `.front`, and the characters are in the `div` class `.back`. We will use `z-index` to make it look like the characters are underneath the glitch text.
@@ -194,14 +195,135 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 17. Congrats! You should now have "randomly :wink:" falling characters in the background!
 
 ### Second Page: Flipping Boxes
+1. For this part, you should be on the second page with a card in the middle. Our goal is to make it so when you hover over the card, it will transform/flip to the other side revealing a message!
+
+2. The part we are editing in index.html is
+```html
+      <div class="pun-flip-section">
+        <h2>Be my date?</h2>
+        <div class="card-flip">
+          <div class="card-front">
+            <h2>Heyy, if they made you in C</h2>
+          </div>
+          <div class="card-back">
+            <h2>You would have a pointer to my heart ;)</h2>
+          </div>
+        </div>
+      </div>
+```
+Keep this in mind as we start editing the css to add some fancy styles.
+
+3. The fist thing we would want to add is to make the card and set some transform properties using perspective, transition, and transform-style. Append the following code to the end of your css file.
+```css
+  .card-flip {
+      background-color: lightpink;
+      width: 800px;
+      height: 300px;
+      border: 1px solid;
+      perspective: 1000px;
+      transition: transform 1.5s;
+      transform-style: preserve-3d;
+  }
+```
+You can toy around with these last properties such as making the flipping animation longer and such.
+
+4. Now let's make it so the card would respond when we hover over it. Append the following to css file again.
+```css
+ .card-flip:hover {
+      transform: rotateY(180deg);
+      background: transparent;
+  }
+```
+This will make it so when you hover over it, it would flip along its vertical axis 180 degrees. Try out rotateX or rotateZ for some other ways to do it!
+
+5. Now, let's position the the text we want correctly and have it so when they rotate over they would be hidden using backface-visibility. Append the following to CSS.
+
+```css
+  .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: lightpink;
+  }
+```
+Now the text should make more sense when viewing it.
+
+6. Finally, we will add another transform just to the backside of the card so it would do the animation. Append the following to CSS.
+```css
+  .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      background-color: lightpink;
+  }
+```
+
+With that, this should work well! Hover over it to see the effects. Also feel free to put in your own custom messages and images on the card faces. Have fun!
 
 
 ### Third Page: Scrollable Hidden Message
 
+1. Here we'll be working in `<div class="hidden-message-section">` where you'll be adding your special flitz message ;)
+		  1. This page contains two other `<div>` containers: slider and slides that take care of the hidden message
+2. Add in your text for the hidden message where it says "Add Text Here", and then paste this piece of code inside `<div  class="slides">`.
+	1. ```html
+		<div  id="slide-1"> 
+		<p>Scroll Left</p>
+		</div>
+		<div  id="slide-2">
+			Add Text Here
+		</div>
+		<div  id="slide-3">
+			Add Text Here
+		</div>
+		<div  id="slide-4">
+			Add Text Here
+		</div>
+		<div  id="slide-5">
+			Add Text Here
+		</div>
+3. Now we move onto `<div class="hidden-message-section>`, paste the below code in the css section under `div.hidden-message-section`, this aligns the hidden message box in the center of `<div>` container.
+	1. ```css
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 90vh;
+		width: 100%; 
+4. Then, we move onto the `.slider` class, which takes care of styling the box for the hidden message:
+	1. ```css
+		width: 500px;
+		text-align: center;
+		overflow: hidden;
+		align-self: center;
+5. Next, we have to style the content inside the hidden message box:
+	1. ```css
+		display: flex;
+		overflow-x: auto;
+		scroll-behavior: smooth;
+		-webkit-overflow-scrolling: touch;
+		scroll-snap-points-x: repeat(300px);
+		scroll-snap-type: mandatory;
+6. Then finally, under `.slides  >  div`, we take care of styling the font and how the different pages inside the hidden message box scroll and show the message, so paste:
+	1. ```css
+		font-family: 'Press Start 2P', cursive;
+		flex-shrink: 0;
+		width: 500px;
+		height: 500px;
+		background: black;
+		transform-origin: center  center;
+		transform: scale(1);
+		transition: transform 0.5s;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 20px;
+		color: #1ec503;
 
 ### Fourth Page: Hover Effects
 1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
-![](https://media.giphy.com/media/35KdD3pqLudXAPHzB2/giphy.gif)
 
 
 2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
