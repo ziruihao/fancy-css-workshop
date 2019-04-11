@@ -1,0 +1,226 @@
+body {
+    padding: 0;
+    margin: 0;
+
+}
+
+/******************************************
+GLITCH TEXT STYLING AND ANIMATIONS
+*******************************************/
+
+/** Add @keyframes here **/
+
+
+.title-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glitch-text {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 5vw;
+    color: #1ec503;
+    /** Add animation here **/
+}
+
+/******************************************
+FALLING CODE STYLING AND ANIMATIONS
+*******************************************/
+.front {
+
+}
+
+.back {
+
+}
+
+/*https://stackoverflow.com/questions/4264527/vertical-text-direction*/
+.scroll-text-1 {
+
+}
+
+.scroll-text-2 {
+
+}
+
+#text-lines {
+
+}
+
+/* inspo from https://codepen.io/anon/pen/vMgpPB */
+@keyframes fall1 {
+
+}
+
+@keyframes fall2 {
+
+}
+
+/******************************************
+FLIPPING PUN STYLING AND ANIMATIONS
+*******************************************/
+.pun-flip-section {
+    width: 100vw;
+    height: 100vh;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Press Start 2P", cursive;
+    text-align: center;
+    font-size: 1.5vw;
+    color: #1ec503;
+}
+
+/* inspo from https://codepen.io/edeesims/pen/iGDzk */
+.card-flip {
+    width: 24vw;
+    height: 24vw;
+    perspective: 1000px;
+}
+
+.card-flip-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
+
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #000000;
+}
+
+.card-back {
+    transform: rotateY( 180deg );
+}
+
+.card-front h2, .card-back h2 {
+    padding: 1vw;
+}
+
+/******************************************
+HEART HOVER SECTION STYLING AND ANIMATIONS
+*******************************************/
+#title {
+    font-size: 2.5vw;
+    font-family: 'Press Start 2P', cursive;
+    color: #1ec503;
+}
+
+.heart-hover-section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#heart-container {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.heart {
+    position: relative;
+    transition: all .8s ease-in-out;
+}
+
+.heart img {
+   height: 30vw;
+}
+
+.heart p {
+    font-size: 1.5vw;
+    font-family: 'Press Start 2P', cursive;
+    color: #1ec503;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#h1:hover {
+    animation: beat .5s ease infinite;
+}
+
+#h2:hover {
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+}
+
+#h3:hover {
+    transform: rotate(180deg);
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes beat {
+    0%{transform: scale(1);}
+    50%{transform: scale(1.1);}
+    100%{transform: scale(1);}
+}
+
+/******************************************
+SLIDING HIDDEN MESSAGE STYLING AND ANIMATIONS
+*******************************************/
+.hidden-message-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1ec503;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+}
+
+/* the following css is inspired from: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
+.slider {
+    width: 40vw;
+    text-align: center;
+}
+
+.slides > div {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    font-size: 2vw;
+    flex-shrink: 0;
+    width: 40vw;
+    height: 30vw;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

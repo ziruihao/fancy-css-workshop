@@ -200,20 +200,12 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 2. The part we are editing in index.html is
 ```html
       <div class="pun-flip-section">
-        <h2>Be my date?</h2>
-        <div class="card-flip">
-          <div class="card-front">
-            <h2>Heyy, if they made you in C</h2>
-          </div>
-          <div class="card-back">
-            <h2>You would have a pointer to my heart ;)</h2>
-          </div>
-        </div>
+        ...
       </div>
 ```
 Keep this in mind as we start editing the css to add some fancy styles.
 
-3. The fist thing we would want to add is to make the card and set some transform properties using perspective, transition, and transform-style. Append the following code to the end of your css file.
+3. The fist thing we would want to add is to make the card and set some transform properties using `perspective`, `transition`, and `transform-style`. Add the following code to the flipping pun section of your css file.
 ```css
   .card-flip {
       background-color: lightpink;
@@ -269,7 +261,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 
 2. Add in your text for the hidden message where it says "Add Text Here", and then paste this piece of code inside `<div  class="slides">`.
 ```html
-	<div  id="slide-1"> 
+	<div  id="slide-1">
 	<p>Scroll Left</p>
 	</div>
 	<div  id="slide-2">
@@ -291,7 +283,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 	align-items: center;
 	justify-content: center;
 	height: 90vh;
-	width: 100%; 
+	width: 100%;
 ```
 4. Then, we move onto the `.slider` class, which takes care of styling the box for the hidden message:
 ```css
@@ -414,4 +406,3 @@ Tutorials Used:
 * https://codepen.io/anon/pen/vMgpPB
 * https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/
 * https://codepen.io/edeesims/pen/iGDzk
-
