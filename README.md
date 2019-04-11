@@ -351,11 +351,13 @@ and the beating animation will use the scale transformation to pulse the heart. 
 }
 ```
 
-5. Now all your hearts should animate on hover! To customize your page so that everyone on campus isn't getting the exact same flitz, try some of the different transformations found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) with more documentation [here](https://www.w3schools.com/cssref/css3_pr_transform.asp)!
+5. Now all your hearts should animate on hover! To customize your page so that everyone on campus isn't getting the exact same flitz, **try some of the different transformations** found [here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform) with more documentation [here](https://www.w3schools.com/cssref/css3_pr_transform.asp)! You could also **change the filepath** within the `img` tag under the `heart` div to apply these hover effects to different images. May we suggest [yes,](https://media.giphy.com/media/6cFcUiCG5eONW/giphy.gif) [maybe,](https://media.giphy.com/media/6qmOIwxEJnt96/giphy.gif) and [no](https://media.giphy.com/media/1zSz5MVw4zKg0/giphy.gif) gifs?
 
 
 ### Bonus!
 Use radio buttons to add a click effect when one of the heart answers is selected! That way your crush can see whcih reply they are selecting. This would be a lot like the radio button menu hack from lab two. Suggestion: change the color of the text or the scale of the image when the heart is clicked.
+
+Also feel free to change the colors, fonts, and layout to make it your own! Your end result can look completely different from ours.
 
 *Alternative Bonus:* Use Surge to host your site and flitz it to a friend. :wink:
 
