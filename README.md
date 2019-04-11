@@ -277,50 +277,38 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 		Add Text Here
 	</div>
 ```
-3. Now we move onto `<div class="hidden-message-section>`, paste the below code in the css section under `div.hidden-message-section`, this aligns the hidden message box in the center of `<div>` container.
+
+3. Then, we move onto the `.slider` and `.slides` classes, which take care of styling the box for the hidden message:
 ```css
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 90vh;
-	width: 100%;
-```
-4. Then, we move onto the `.slider` class, which takes care of styling the box for the hidden message:
+  .slider {
+      width: 40vw;
+      text-align: center;
+  }
+
+  .slides {
+      display: flex;
+      overflow-x: auto;
+  }
+
+4. Then finally, under `.slides  >  div`, we take care of styling the font and how the different pages inside the hidden message box scroll and show the message, so add:
 ```css
-	width: 500px;
-	text-align: center;
-	overflow: hidden;
-	align-self: center;
+  .slides > div {
+      font-family: 'Press Start 2P', cursive;
+      color: #ffffff;
+      font-size: 2vw;
+      flex-shrink: 0;
+      width: 40vw;
+      height: 30vw;
+      background: #000000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
 ```
-5. Next, we have to style the content inside the hidden message box:
-```css
-	display: flex;
-	overflow-x: auto;
-	scroll-behavior: smooth;
-	-webkit-overflow-scrolling: touch;
-	scroll-snap-points-x: repeat(300px);
-	scroll-snap-type: mandatory;
-```
-6. Then finally, under `.slides  >  div`, we take care of styling the font and how the different pages inside the hidden message box scroll and show the message, so paste:
-```css
-	font-family: 'Press Start 2P', cursive;
-	flex-shrink: 0;
-	width: 500px;
-	height: 500px;
-	background: black;
-	transform-origin: center  center;
-	transform: scale(1);
-	transition: transform 0.5s;
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 20px;
-	color: #1ec503;
-```
+Notice that we take advantage of `flexbox` and the different properties involved, like `overflow-x` to make the scrolling effect.
 
 ### Fourth Page: Hover Effects
-1. The last div has a question for your flitz with three heart-shaped answer options. We are going to animate each option so they know the emotional toll that their answer will have on you.
+1. The last div has three heart-shaped options for your crush to respond with. We are going to animate each option so they know the emotional toll that their answer will have on you.
 
 
 2. First, we will define two more keyframes animations, one for the shaking and one for the beating. The shaking animation will use the translate and rotate transformations to quickly move the heart in a shaky little circle...
@@ -340,7 +328,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
     100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 ```
-and the beating animation will use the scale transformation to pulse the heart.
+and the beating animation will use the scale transformation to pulse the heart. Scaling by 1.1 increases the size of the image by 10%, which produces the beating effect.
 ```css
 @keyframes beat {
     0%{transform: scale(1);}
