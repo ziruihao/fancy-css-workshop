@@ -198,6 +198,8 @@ Let's break this down. `0%` refers to the beginning of the animation (0% of the 
 17. Congrats! You should now have "randomly :wink:" falling characters in the background!
 
 ### Second Page: Flipping Boxes
+![](https://media.giphy.com/media/1yMzrbg2os7OOeidGi/giphy.gif)
+
 1. For this part, you should be on the second page with a row of pun cards in the middle. Our goal is to make it so when you hover over the cards, they will flip to the other side to reveal a message!
 
 2. The part we are applying styles to in index.html is `pun-flip-section`. Each card is a set of nested divs. The outermost div is the `card-flip`, representing the whole card. Next, `card-flip-inner` holds both the back and front contents of the card. Finally, `card-back` and `card-front` contain the actually text displayed on each side of the card. Keep this in mind as we start editing the css to add some fancy styles.
@@ -244,6 +246,7 @@ With that, the cards should flip on hover! Try them out and feel free to put in 
 
 
 ### Third Page: Scrollable Hidden Message
+![](https://lh4.googleusercontent.com/32Qgzq7Dbg-_3rG_uVYZZmecRDiDFQxWrFySDIzBW8At52PvzXhHQt_jAQ-0m4BOQxIYjE7uubKD5gmdKWIaB1b6S_FuushzOikn2Fw4)
 
 1. Here we'll be working in `<div class="hidden-message-section">` where you'll be adding your special flitz message! This page contains two other `<div>` containers: slider and slides that take care of the hidden message
 
@@ -298,6 +301,8 @@ With that, the cards should flip on hover! Try them out and feel free to put in 
 5. Now test out the hidden message box and see if your message appears as you scroll to the left!
 
 ### Fourth Page: Hover Effects
+![](https://lh4.googleusercontent.com/6jlpJ8J7LXBGdD2oEK25wtgDRsDaxeKVBeSxCiRHksMKq125Ffx1JGLiQ9J2tVU-AGtFn5MCM8_XArCjRjKVsASAK7Gh7irZzmuJAzNQ)
+
 1. The last div has three heart-shaped options for your crush to respond with. We are going to animate each option so they know the emotional toll that their answer will have on you.
 
 
