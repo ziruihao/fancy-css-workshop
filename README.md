@@ -12,7 +12,7 @@ We are going to craft a tech-themed flitz site to send to our CS crushes. Since 
 
 Download your own copy of this repo and `cd` into the `template_code` folder. It should contain `index.html`, `style.css`, and a `pixel-heart.png`. The index file contains the outline structure and basic content of the flitz page, and the CSS has basic styling done already. You'll be adding to `style.css` for most of this tutorial. You can run :computer:`python -m SimpleHTTPServer 9000` to view the non-fancy site on your localhost and to see your progress as you move through the tutorial!
 
-The `complete_code` directory has all the code for the working flitz, so you can reference it if you get stuck or just want to see what the complete site should look like. The completed tutorial is also hosted [here](http://flitz_test_2.surge.sh).
+If you want to see what the complete site should look like, the completed tutorial is hosted [here](http://flitz-workshop.surge.sh).
 
 :rocket: Make sure to use Chrome for this tutorial! Due to compatibility, you may not get the same effects if you use a different browser.
 
@@ -380,7 +380,7 @@ Use radio buttons to add a click effect when one of the heart answers is selecte
 :bulb: *Don't forget to submit these on Canvas!*
 
 * [ ] Why use CSS to add effects to your site instead of JavaScript? When might it be better to use JavaScript?
-* [ ] Why add fancy styling to your site at all? When could fancy effects be useful?
+* [ ] What do the percentages within keyframes animations mean? How do you set how long the animation should take to run?
 
 
 ## Resources
