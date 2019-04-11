@@ -8,7 +8,7 @@ body {
 GLITCH TEXT STYLING AND ANIMATIONS
 *******************************************/
 
-/** Add @keyframes here **/
+/** Add one giant @keyframes here (about 30 lines) **/
 
 
 .title-section {
@@ -89,15 +89,11 @@ FLIPPING PUN STYLING AND ANIMATIONS
 
 }
 
-.card-flip:hover .card-flip-inner {
+.card-flip:hover .card-flip-inner, .card-back {
 
 }
 
 .card-front, .card-back {
-
-}
-
-.card-back {
 
 }
 

@@ -264,7 +264,7 @@ FLIPPING PUN STYLING AND ANIMATIONS
     transform-style: preserve-3d;
 }
 
-.card-flip:hover .card-flip-inner {
+.card-flip:hover .card-flip-inner, .card-back {
     transform: rotateY(180deg);
 }
 
@@ -274,10 +274,6 @@ FLIPPING PUN STYLING AND ANIMATIONS
     height: 100%;
     backface-visibility: hidden;
     background-color: #000000;
-}
-
-.card-back {
-    transform: rotateY( 180deg );
 }
 
 .card-front h2, .card-back h2 {
