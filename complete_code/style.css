@@ -10,7 +10,7 @@ GLITCH TEXT STYLING AND ANIMATIONS
 .title-section {
     width: 100vw;
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -196,89 +196,90 @@ HEART HOVER SECTION STYLING AND ANIMATIONS
     100%{transform: scale(1);}
 }
 
+/******************************************
+SLIDING HIDDEN MESSAGE STYLING AND ANIMATIONS
+*******************************************/
+.hidden-message-section {
+    height: 100vh;
+    width: 100vw;
+    background-color: #1ec503;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.slides {
+    display: flex;
+    overflow-x: auto;
+}
 
 /* the following css is inspired from: https://css-tricks.com/can-get-pretty-far-making-slider-just-html-css/ */
 .slider {
-    width: 500px;
+    width: 40vw;
     text-align: center;
-    overflow: hidden;
-    align-self: center;
-  }
-  
-  .slides {
-    display: flex;
-    overflow-x: auto;
-    
-    scroll-behavior: smooth;
-    
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-points-x: repeat(300px);
-    scroll-snap-type: mandatory;
-  }
-
-  .slides > div {
-    font-family: 'Press Start 2P', cursive;
-    flex-shrink: 0;
-    width: 500px;
-    height: 500px;
-    
-    background: black;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 20px;
-    color: #1ec503;
-  }
-
-div.hidden-message-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 90vh;
-    width: 100%;
 }
 
+.slides > div {
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+    font-size: 2vw;
+    flex-shrink: 0;
+    width: 40vw;
+    height: 30vw;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/******************************************
+FLIPPING PUN STYLING AND ANIMATIONS
+*******************************************/
 .pun-flip-section {
     width: 100vw;
     height: 100vh;
-    background-color: lightblue;
+    background-color: #ffffff;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    font-family: "Press Start 2P";
+    font-family: "Press Start 2P", cursive;
     text-align: center;
-    font-size: 2em;
-    flex-direction: column;
-  }
+    font-size: 1.5vw;
+    color: #1ec503;
+}
 
-  .card-flip {
-      background-color: lightpink;
-      width: 800px;
-      height: 300px;
-      border: 1px solid;
-      perspective: 1000px;
-      transition: transform 1.5s;
-      transform-style: preserve-3d;
-  }
+/* inspo from https://codepen.io/edeesims/pen/iGDzk */
+.card-flip {
+    width: 24vw;
+    height: 24vw;
+    perspective: 1000px;
+}
 
-  .card-flip:hover {
-      transform: rotateY(180deg);
-      background: transparent;
-  }
+.card-flip-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: transform 1.5s;
+    transform-style: preserve-3d;
+}
 
-  .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      backface-visibility: hidden;
-      background-color: lightpink;
-  }
+.card-flip:hover .card-flip-inner {
+    transform: rotateY(180deg);
+}
 
-  .card-back {
-      transform: rotateY(180deg);
-  }
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-color: #000000;
+}
+
+.card-back {
+    transform: rotateY( 180deg );
+}
+
+.card-front h2, .card-back h2 {
+    padding: 1vw;
+}
