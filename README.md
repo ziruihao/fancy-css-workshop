@@ -169,7 +169,7 @@ Great, we've just used a hacky method to make our characters look randomly space
       animation: fall2 13s linear infinite;
   }
 ```
-Notice that we use the shorthand version of the `animation` property, so the first argument is `animation-name`, the second is `animation-duration`, and the third is `animation-iteration-count`. Also notice that the `animation-duration` is slightly different for `fall1` and `fall2`: this is the variation we talked about earlier. The characters should't move yet, since we haven't added the `@@keyframes`.
+Notice that we use the shorthand version of the `animation` property, so the first argument is `animation-name`, the second is `animation-duration`, the third is `animation-timing-function` and the fourth is `animation-iteration-count`. Also notice that the `animation-duration` is slightly different for `fall1` and `fall2`: this is the variation we talked about earlier. The characters should't move yet, since we haven't added the `@@keyframes`.
 
 16. So let's add the `@keyframes` that will actually make the characters move.
 ```css
@@ -259,7 +259,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
 
 1. Here we'll be working in `<div class="hidden-message-section">` where you'll be adding your special flitz message! This page contains two other `<div>` containers: slider and slides that take care of the hidden message
 
-2. Add in your text for the hidden message where it says "Add Text Here", and then paste this piece of code inside `<div  class="slides">`.
+2. In `index.html`, add in your customized question for the hidden message where it says "Add Text Here", and then paste this piece of code inside `<div  class="slides">`.
 ```html
 	<div  id="slide-1">
 	<p>Scroll Left</p>
@@ -289,6 +289,7 @@ With that, this should work well! Hover over it to see the effects. Also feel fr
       display: flex;
       overflow-x: auto;
   }
+```
 
 4. Then finally, under `.slides  >  div`, we take care of styling the font and how the different pages inside the hidden message box scroll and show the message, so add:
 ```css
@@ -368,9 +369,8 @@ Use radio buttons to add a click effect when one of the heart answers is selecte
 * [ ] A glitchy text effect by hiding/showing different parts of a header
 * [ ] Scrolling code in the background of a screen
 * [ ] Cards that flip on hover
-* [ ] A hidden message that the user can drag to reveal
+* [ ] A hidden message that the user can scroll to reveal
 * [ ] Different, fun hover effects for images
-* [ ] Fading scroll between different divs
 
 **What you learned:**
 * [ ] How to define your own keyframes animations
